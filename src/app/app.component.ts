@@ -25,7 +25,7 @@ import {
           ])
         ),
       ]),
-      transition('void=> *', [
+      transition('*=> void', [
         style({ transform: 'translateX(0px)' }),
         animate(
           200,
