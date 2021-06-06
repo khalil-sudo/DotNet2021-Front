@@ -9,14 +9,22 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'DotNet2021-Front';
 
-  idArray = [''];
+  todoArray: string[] = [];
 
-  addId(value: string) {
+  addTodo(value: string) {
     if (value != '') {
-      this.idArray.push(value);
-      console.log(this.idArray);
+      this.todoArray.push(value);
+      console.log(this.todoArray);
     } else {
-      alert('Id Requis!!');
+      alert('field Required!!');
+    }
+  }
+  deleteItem(todo: string) {
+    for (let i = 0; i <= this.todoArray.length; i++) {
+      if (todo == this.todoArray[i]) {
+        this.todoArray.splice(i, 1);
+        console.log('delete item');
+      }
     }
   }
 }
