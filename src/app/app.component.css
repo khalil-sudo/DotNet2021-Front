@@ -13,10 +13,7 @@ form {
   padding: 2em 3em;
   overflow: hidden;
 }
-/* div.input-group-prepend {
-  display: flex;
-  padding: 10px;
-} */
+
 form h1 {
   font-family: "Raleway";
   color: #f97300;
@@ -28,7 +25,7 @@ form input[type-text]::placeholder {
 form .data {
   margin-top: 1em;
 }
-form.data li {
+form .data li {
   background: #fff;
   border-left: 4px solid #f97300;
   padding: 1em;
@@ -50,17 +47,17 @@ form .input-group-text {
   color: #fff;
   position: absolute;
   right: 13px;
-  top: 60px;
+  top: 68px;
   cursor: pointer;
 }
 
-form .input-goup-text i {
+form .input-group-text i {
   font-size: 2em;
 }
 form .form-control {
   height: 3em;
   font-family: "Raleway";
 }
-form .form-control :focus {
+form .form-control:focus {
   box-shadow: 0;
 }
