@@ -1,5 +1,5 @@
 import { variable } from '@angular/compiler/src/output/output_ast';
-import { Component } from '@angular/core';
+import { Component, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -10,6 +10,8 @@ export class AppComponent {
   title = 'DotNet2021-Front';
 
   todoArray: string[] = [];
+
+  @ViewChild('todoForm', { static: false }) todoForm: any;
 
   addTodo(value: string) {
     if (value != '') {
@@ -32,6 +34,8 @@ export class AppComponent {
     if (form != '') {
       console.log(form);
       this.todoArray.push(form.todo);
+
+      this.todoForm.resetForm();
     } else {
       alert(' filed required!');
     }
